@@ -104,3 +104,6 @@ build_output*.txt
 # Seeder repositories
 /local-seeders/
 /.local-seeders-dist/
+# Build artifacts
+/dist-exe/
+WorldWideView.exe

@@ -1,1 +1,0 @@
-globalThis.__RSC_MANIFEST=(globalThis.__RSC_MANIFEST||{});globalThis.__RSC_MANIFEST["/api/camera/test/route"]={"moduleLoading":{"prefix":"/_next/"},"ssrModuleMapping":{},"edgeSSRModuleMapping":{},"clientModules":{},"entryCSSFiles":{"C:\\Users\\adria\\Downloads\\worldwideview-main\\src\\app\\api\\camera\\test\\route":[]},"rscModuleMapping":{},"edgeRscModuleMapping":{}};

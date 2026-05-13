@@ -1,1 +1,0 @@
-globalThis.__RSC_MANIFEST=(globalThis.__RSC_MANIFEST||{});globalThis.__RSC_MANIFEST["/api/keys/verify/route"]={"moduleLoading":{"prefix":"/_next/"},"ssrModuleMapping":{},"edgeSSRModuleMapping":{},"clientModules":{},"entryCSSFiles":{"C:\\Users\\adria\\Downloads\\worldwideview-main\\src\\app\\api\\keys\\verify\\route":[]},"rscModuleMapping":{},"edgeRscModuleMapping":{}};
