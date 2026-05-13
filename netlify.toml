@@ -1,0 +1,11 @@
+[build]
+  command = "pnpm run copy-cesium && npx prisma generate && next build"
+  publish = ".next"
+
+[build.environment]
+  NEXT_USE_PNPM = "true"
+  NODE_VERSION = "20"
+  PNPM_FLAGS = "--shamefully-hoist"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

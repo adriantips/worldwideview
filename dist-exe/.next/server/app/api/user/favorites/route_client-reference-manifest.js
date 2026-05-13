@@ -1,0 +1,1 @@
+globalThis.__RSC_MANIFEST=(globalThis.__RSC_MANIFEST||{});globalThis.__RSC_MANIFEST["/api/user/favorites/route"]={"moduleLoading":{"prefix":"/_next/"},"ssrModuleMapping":{},"edgeSSRModuleMapping":{},"clientModules":{},"entryCSSFiles":{"C:\\Users\\adria\\Downloads\\worldwideview-main\\src\\app\\api\\user\\favorites\\route":[]},"rscModuleMapping":{},"edgeRscModuleMapping":{}};

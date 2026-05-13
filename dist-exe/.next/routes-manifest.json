@@ -1,0 +1,309 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://unpkg.com https://cdn.jsdelivr.net https://analytics.worldwideview.dev https://va.vercel-scripts.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://ep2.adtrafficquality.google https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob: http: https:; connect-src 'self' http: https: ws: wss:; media-src 'self' blob: http: https:; frame-src 'self' http: https: blob:; worker-src 'self' blob:; frame-ancestors 'none'"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(self)"
+        }
+      ],
+      "regex": "^(?:/(.*))(?:/)?$"
+    }
+  ],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/auth/[...nextauth]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnextauth": "nxtPnextauth"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/internal/workspace/[subdomain]",
+      "regex": "^/api/internal/workspace/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPsubdomain": "nxtPsubdomain"
+      },
+      "namedRegex": "^/api/internal/workspace/(?<nxtPsubdomain>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/auth/setup-status",
+      "regex": "^/api/auth/setup\\-status(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/auth/setup\\-status(?:/)?$"
+    },
+    {
+      "page": "/api/billing/checkout",
+      "regex": "^/api/billing/checkout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/billing/checkout(?:/)?$"
+    },
+    {
+      "page": "/api/billing/webhook",
+      "regex": "^/api/billing/webhook(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/billing/webhook(?:/)?$"
+    },
+    {
+      "page": "/api/camera/extract",
+      "regex": "^/api/camera/extract(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/extract(?:/)?$"
+    },
+    {
+      "page": "/api/camera/list",
+      "regex": "^/api/camera/list(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/list(?:/)?$"
+    },
+    {
+      "page": "/api/camera/proxy",
+      "regex": "^/api/camera/proxy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/proxy(?:/)?$"
+    },
+    {
+      "page": "/api/camera/proxy/iframe",
+      "regex": "^/api/camera/proxy/iframe(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/proxy/iframe(?:/)?$"
+    },
+    {
+      "page": "/api/camera/proxy/stream",
+      "regex": "^/api/camera/proxy/stream(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/proxy/stream(?:/)?$"
+    },
+    {
+      "page": "/api/camera/test",
+      "regex": "^/api/camera/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/test(?:/)?$"
+    },
+    {
+      "page": "/api/camera/traffic",
+      "regex": "^/api/camera/traffic(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/camera/traffic(?:/)?$"
+    },
+    {
+      "page": "/api/dev/load-unpacked",
+      "regex": "^/api/dev/load\\-unpacked(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/dev/load\\-unpacked(?:/)?$"
+    },
+    {
+      "page": "/api/earthquake",
+      "regex": "^/api/earthquake(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/earthquake(?:/)?$"
+    },
+    {
+      "page": "/api/glitchtip-tunnel",
+      "regex": "^/api/glitchtip\\-tunnel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/glitchtip\\-tunnel(?:/)?$"
+    },
+    {
+      "page": "/api/health",
+      "regex": "^/api/health(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/health(?:/)?$"
+    },
+    {
+      "page": "/api/keys/verify",
+      "regex": "^/api/keys/verify(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/keys/verify(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/check-updates",
+      "regex": "^/api/marketplace/check\\-updates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/check\\-updates(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/disabled-builtins",
+      "regex": "^/api/marketplace/disabled\\-builtins(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/disabled\\-builtins(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/grant-token",
+      "regex": "^/api/marketplace/grant\\-token(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/grant\\-token(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/install",
+      "regex": "^/api/marketplace/install(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/install(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/install-redirect",
+      "regex": "^/api/marketplace/install\\-redirect(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/install\\-redirect(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/load",
+      "regex": "^/api/marketplace/load(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/load(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/sideload",
+      "regex": "^/api/marketplace/sideload(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/sideload(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/status",
+      "regex": "^/api/marketplace/status(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/status(?:/)?$"
+    },
+    {
+      "page": "/api/marketplace/uninstall",
+      "regex": "^/api/marketplace/uninstall(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/marketplace/uninstall(?:/)?$"
+    },
+    {
+      "page": "/api/places/details",
+      "regex": "^/api/places/details(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/places/details(?:/)?$"
+    },
+    {
+      "page": "/api/places/search",
+      "regex": "^/api/places/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/places/search(?:/)?$"
+    },
+    {
+      "page": "/api/plugins/osm-search",
+      "regex": "^/api/plugins/osm\\-search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/plugins/osm\\-search(?:/)?$"
+    },
+    {
+      "page": "/api/undersea-cables",
+      "regex": "^/api/undersea\\-cables(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/undersea\\-cables(?:/)?$"
+    },
+    {
+      "page": "/api/user/favorites",
+      "regex": "^/api/user/favorites(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/user/favorites(?:/)?$"
+    },
+    {
+      "page": "/icon.svg",
+      "regex": "^/icon\\.svg(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon\\.svg(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/setup",
+      "regex": "^/setup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setup(?:/)?$"
+    },
+    {
+      "page": "/test/cameras",
+      "regex": "^/test/cameras(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test/cameras(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";exports.id=7843,exports.ids=[7843],exports.modules={77843:(a,b,c)=>{function d(a,b){try{window.umami?.track(a,b)}catch{}}c.r(b),c.d(b,{trackEvent:()=>d})}};
